@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import Link
+ from "next/link";
 import { useAppDispatch, useAppSelector } from "../app/hooks"
 import { selectCount } from "../features/counter/counterSlice";
 
@@ -22,6 +24,7 @@ const IndexPage = () => {
                 <button onClick={() => dispatch(decrement())}>Decrement by 1</button>
                 <button onClick={() => dispatch(increment())}>Increment by 1</button>
             </div>
+            <Link href="/"><button>Go Home!</button></Link>
         </>
     )
 }
