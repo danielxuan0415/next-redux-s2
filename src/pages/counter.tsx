@@ -2,10 +2,10 @@ import React, { useState } from "react"
 import Link
  from "next/link";
 import { useAppDispatch, useAppSelector } from "../app/hooks"
-import { selectCount } from "../features/counter/counterSlice";
+import { selectCount } from "../features/counter";
 
 import { increment, decrement, incrementByAmount }
-    from "../features/counter/counterSlice";
+    from "../features/counter";
 const val1: number = 0
 const IndexPage = () => {
     const dispatch = useAppDispatch();

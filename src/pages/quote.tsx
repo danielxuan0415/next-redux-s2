@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "../app/hooks"
-import { getQuote } from "../features/quote/quoteSlice";
-import { selectQuote } from "../features/quote/quoteSlice";
+import { getQuote, selectQuote } from "../features/quote";
+
 
 const QuotePage: React.FC = () => {
 
@@ -16,11 +16,11 @@ const QuotePage: React.FC = () => {
                 {pending && <p>Loading...</p>}
                 {data && <p>{data.quote}</p>}
                 {error && <p>Oops, something went wrong</p>}
-                
+
                 <button onClick={() => dispatch(getQuote())} disabled={pending}>Generate Quote!</button>
             </div>
-            <div>
-            <Link href="/"><button>Go Home!</button></Link>
+            <div className="">
+                <Link href="/"><button>Go Home!</button></Link>
             </div>
         </>
     )
